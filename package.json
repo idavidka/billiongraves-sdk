@@ -1,0 +1,80 @@
+{
+	"name": "@treeviz/billiongraves-sdk",
+	"version": "0.1.0",
+	"description": "Modern TypeScript SDK for BillionGraves API - Search and retrieve grave records, cemetery data, and genealogy information",
+	"type": "module",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		},
+		"./auth": {
+			"types": "./dist/auth/index.d.ts",
+			"import": "./dist/auth/index.js",
+			"require": "./dist/auth/index.cjs"
+		},
+		"./api": {
+			"types": "./dist/api/index.d.ts",
+			"import": "./dist/api/index.js",
+			"require": "./dist/api/index.cjs"
+		},
+		"./types": {
+			"types": "./dist/types/index.d.ts",
+			"import": "./dist/types/index.js",
+			"require": "./dist/types/index.cjs"
+		},
+		"./utils": {
+			"types": "./dist/utils/index.d.ts",
+			"import": "./dist/utils/index.js",
+			"require": "./dist/utils/index.cjs"
+		}
+	},
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:ui": "vitest --ui",
+		"lint": "tsc --noEmit",
+		"clean": "rm -rf dist",
+		"prepublishOnly": "npm run build"
+	},
+	"keywords": [
+		"billiongraves",
+		"graves",
+		"cemetery",
+		"genealogy",
+		"api",
+		"sdk",
+		"typescript"
+	],
+	"author": "idavidka and @treeviz contributors",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/idavidka/billiongraves-sdk.git"
+	},
+	"homepage": "https://github.com/idavidka/billiongraves-sdk#readme",
+	"bugs": {
+		"url": "https://github.com/idavidka/billiongraves-sdk/issues"
+	},
+	"devDependencies": {
+		"@types/node": "^25.0.9",
+		"jsdom": "^27.4.0",
+		"tsup": "^8.0.0",
+		"typescript": "^5.1.6",
+		"vitest": "^3.0.7"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	}
+}
