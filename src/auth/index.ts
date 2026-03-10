@@ -41,11 +41,11 @@ export async function login(
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
-			"Accept": "application/json, text/plain, */*",
+			Accept: "application/json, text/plain, */*",
 			"User-Agent":
 				"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-			"Referer": `${baseUrl}/`,
-			"Origin": baseUrl,
+			Referer: `${baseUrl}/`,
+			Origin: baseUrl,
 		},
 		body: JSON.stringify({ Email: email, Password: password }),
 	});
